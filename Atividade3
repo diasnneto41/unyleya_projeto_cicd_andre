@@ -1,0 +1,24 @@
+Nesta tarefa você poderá anexar um arquivo (fazer o upload dele). Posteriormente, o(a) tutor(a) realizará a avaliação.
+
+___________________________________________
+
+
+Vimos na unidade 2 como utilizar as ferramentas de controle de versão e ferramentas que nos apoiam na adoção delas. Já nesta unidade trabalhamos com as ferramentas de CI/CD e estruturamos esteiras automatizadas.
+
+Diante de todo este cenário, iniciaremos a criação de uma esteira (pipeline) automatizada que será complementada e seu projeto será finalizado na unidade 4.
+
+De acordo com a topologia apresentada abaixo, utilize o repositório GitHub https://github.com/osanam-giordane/MobEAD, efetuando um fork para que possa trabalhar com a aplicação exemplo em seu GitHub.
+
+Você criará o projeto conforme topologia onde fará os seguintes passos:
+
+● Fork do repositório para sua conta GitHub;
+
+● Clone do repositório para seu PC;
+
+● Criação de um repositório chamado unyleya_projeto_cicd_name, troque "name" pelo seu nome;
+
+● Faça o commit do código local para este novo repositório criado no GitHub;
+
+● Crie um projeto no Azure DevOps chamado Unyleya_Projeto_DevOps e integre o repositório criado com a sua pipeline de CI e faça o build da imagem armazenando em seu repositório público no hub.docker.com do projeto criado no Azure DevOps.
+
+
