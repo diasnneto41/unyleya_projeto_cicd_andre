@@ -1,5 +1,5 @@
 trigger:
-- main 
+- main
 
 pool:
   vmImage: 'windows-latest'
@@ -8,24 +8,18 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  dockerRegistryServiceConnection: 'DockerHubConnection' # Preciso criar isso no Azure DevOps
-  imageName: 'unyleya_projeto_devops:$(Build.BuildId)' # Nome da imagem Docker
+  dockerRegistryServiceConnection: 'DockerHubConnection' # O nome da sua conexão de serviço
+  imageName: 'unyleya_projeto_devops:$(Build.BuildId)' # O nome da sua imagem Docker
 
 steps:
-- task: CmdLine@2
-  inputs:
-    script: 'echo Hello, world!'
-
-# ... (outros passos aqui)
-
 - task: Docker@2
+  displayName: 'Build and push an image to Docker Hub'
   inputs:
     containerRegistry: $(dockerRegistryServiceConnection)
     repository: $(imageName)
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile' # Caminho para o Dockerfile no repositório
+    Dockerfile: 'Dockerfile' # Caminho para o Dockerfile no repositório
     buildContext: '.'
     tags: |
       $(Build.BuildId)
 
-# ... (Qualquer outra limpeza ou passos adicionais)
