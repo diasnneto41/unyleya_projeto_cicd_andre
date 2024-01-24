@@ -9,7 +9,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   dockerRegistryServiceConnection: 'DockerHubConnection' # O nome da sua conexão de serviço
-  imageName: 'diasnneto/unyleya:$$Build.BuildId'# O nome da sua imagem Docker
+  imageName: 'diasnneto/unyleya:$$Build.BuildId'
 
 steps:
 - task: Docker@2
